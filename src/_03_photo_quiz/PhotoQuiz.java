@@ -51,15 +51,20 @@ if (i == 3) {
 quizWindow.remove(pic);
 		// 10. find another image and create it (might take more than one line
 		// of code)
-
+Component pic2 = createImage  ("https://vignette.wikia.nocookie.net/nintendo/images/2/2f/Coin_-_New_Super_Mario_Bros.png/revision/latest?cb=20151206061007&path-prefix=en");
 		// 11. add the second image to the quiz window
-
+quizWindow.add(pic2);
 		// 12. pack the quiz window
-
+quizWindow.pack();
 		// 13. ask another question
-
+String answer2 = JOptionPane.showInputDialog("What number is on the coin?");
+int a = Integer.parseInt(answer2);
 		// 14+ check answer, say if correct or incorrect, etc.
-
+if (a == 1) {
+	System.out.println("CORRECT");
+}else {
+	System.out.println("INCORRECT");
+}
 	}
 
 	private Component createImage(String imageUrl) throws MalformedURLException {
